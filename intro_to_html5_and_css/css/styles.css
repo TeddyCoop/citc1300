@@ -98,3 +98,14 @@ hr {
   border-radius: 5px;
   border-radius: 25px;
 }
+
+.center-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.center-images img {
+  margin: 0 10px;
+}
