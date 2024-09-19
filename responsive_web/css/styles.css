@@ -1,0 +1,173 @@
+/* Base Styles (for mobile) */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #1d1d1d;
+    color: #f3f3f3;
+}
+
+header {
+    background-color: #2a2a2a;
+    color: #ff9800;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #ff9800; /* Orange color for external links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the links bold */
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: #e74c3c; /* Darker red for visited links */
+}
+
+a:hover {
+    color: #79ff4d; /* Change to a green color on hover */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff9800;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #e74c3c;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #79ff4d; 
+}
+
+hr {
+    color: #ff9800;
+}
+
+section, aside {
+    width: 100%;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #ff9800;
+}
+
+footer {
+    background-color: #2a2a2a;
+    color: #ff9800;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-height: 50px;
+}
+
+.intro-text {
+    line-height: 1.6;
+    color: #bbb;
+}
+
+#movie-poster {
+    border: 2px solid #333;
+}
+
+/* Tablet View */
+@media screen and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section {
+        flex: 2;
+        padding-right: 20px;
+    }
+
+    aside {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Desktop View */
+@media screen and (min-width: 1024px) {
+    header {
+        text-align: left;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    #container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    section {
+        flex: 2;
+        padding-right: 40px;
+    }
+
+    aside {
+        flex: 1;
+        padding-left: 40px;
+    }
+
+    footer {
+        padding: 20px;
+        position: relative;
+    }
+}
