@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 0px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #ffcc00;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.navbar a {
+  padding: 14px 20px; 
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffcc00;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 204, 0, 0.3);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: auto;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+  text-align: center;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  color: #ffcc00;
+  padding: 10px 0;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  user-select: none;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 0px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(255, 204, 0, 0.3);
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/*
+most of the elements are already responsive so just change the nav bar when the width is small enough
+
+*/
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .navbar a {
+      width: 100%;
+      text-align: center;
+      padding: 14px 0;
+  }
+
+  main {
+    max-width: 100%;
+  }
+}
