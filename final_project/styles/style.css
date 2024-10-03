@@ -74,7 +74,7 @@ footer {
 
 .slideshow-container {
   position: relative;
-  max-width: auto;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -132,7 +132,6 @@ iframe {
 
 /*
 most of the elements are already responsive so just change the nav bar when the width is small enough
-
 */
 @media screen and (max-width: 768px) {
   .navbar {
